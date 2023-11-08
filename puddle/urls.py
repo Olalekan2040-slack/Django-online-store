@@ -25,6 +25,7 @@ from core.views import index, contact
 urlpatterns = [ 
     path('items/', include('item.urls')),
     path('', include('core.urls')),
+    path('conversation/', include('conversation.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
