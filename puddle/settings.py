@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#ul+t$0b3xxgk419%3e9@*&f2d_b@q)331hpq)x8^8it$6j!z)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://e-commerce-ylz3.onrender.com/']
 
 LOGIN_URL = '/login'
 LOGIN_REDIRECT_URL = '/'
