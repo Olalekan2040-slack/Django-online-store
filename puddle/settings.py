@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#ul+t$0b3xxgk419%3e9@*&f2d_b@q)331hpq)x8^8it$6j!z)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -85,8 +85,12 @@ WSGI_APPLICATION = 'puddle.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'todo_list_fnws', 
+        'USER': 'todo_list_fnws_user', 
+        'PASSWORD': 'QB43i2AgCHNavz57JFlkPWfQz1fM3drR',
+        'HOST': 'dpg-cl0319bjdq6s73bj6ghg-a.oregon-postgres.render.com', 
+        'PORT': '5432',
     }
 }
 
