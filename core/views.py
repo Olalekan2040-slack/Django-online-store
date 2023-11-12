@@ -4,7 +4,7 @@ from .forms import SignupForm
 from item.models import Category, Item
 
 def index(request):
-    items = Item.objects.filter(is_sold=False)[0:15]
+    items = Item.objects.filter(is_sold=False)[0:12]
     categories = Category.objects.all()
 
 
