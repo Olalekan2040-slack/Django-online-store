@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#ul+t$0b3xxgk419%3e9@*&f2d_b@q)331hpq)x8^8it$6j!z)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -92,7 +92,7 @@ DATABASES = {
         'HOST': 'dpg-cl0319bjdq6s73bj6ghg-a.oregon-postgres.render.com', 
         'PORT': '5432',
         'OPTIONS': {
-            'sslmode': 'require', 
+            'sslmode': 'require',  # or 'verify-full' for more strict verification
             'sslrootcert': 'postgres://todo_list_fnws_user:QB43i2AgCHNavz57JFlkPWfQz1fM3drR@dpg-cl0319bjdq6s73bj6ghg-a.oregon-postgres.render.com/todo_list_fnws',
     }
     }
