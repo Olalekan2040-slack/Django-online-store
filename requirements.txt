@@ -7,3 +7,4 @@ tzdata
 gunicorn
 Pillow
 psycopg2
+dj_database_url
