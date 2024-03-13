@@ -83,20 +83,29 @@ WSGI_APPLICATION = 'puddle.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'Jobserve.com', 
+#         'USER': 'jobserve_com_user', 
+#         'PASSWORD': 'FD014NasZwS5mqZUSxYW3LMO3aV0IkNI',
+#         'HOST': 'dpg-cmjppita73kc7385f7og-a.oregon-postgres.render.com', 
+#         'PORT': '5432',
+#     #     'OPTIONS': {
+#     #         'sslmode': 'require',  # or 'verify-full' for more strict verification
+#     #         'sslrootcert': 'postgres://jobserve_com_user:FD014NasZwS5mqZUSxYW3LMO3aV0IkNI@dpg-cmjppita73kc7385f7og-a.oregon-postgres.render.com/jobserve_com',
+#     # }
+#     }
+# }
+
+import dj_database_url
+
 DATABASES = {
-    'default': {
-       'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'todo_list_fnws', 
-        'USER': 'todo_list_fnws_user', 
-        'PASSWORD': 'QB43i2AgCHNavz57JFlkPWfQz1fM3drR',
-        'HOST': 'dpg-cl0319bjdq6s73bj6ghg-a.oregon-postgres.render.com', 
-        'PORT': '5432',
-        'OPTIONS': {
-            'sslmode': 'require',  # or 'verify-full' for more strict verification
-            'sslrootcert': 'postgres://todo_list_fnws_user:QB43i2AgCHNavz57JFlkPWfQz1fM3drR@dpg-cl0319bjdq6s73bj6ghg-a.oregon-postgres.render.com/todo_list_fnws',
-    }
-    }
+    'default': dj_database_url.config(
+        default='postgres://oehocfgh:NubvcAw9RstdbzWCluLSTkdrJonwEG9g@ziggy.db.elephantsql.com/oehocfgh'
+    )
 }
+
 
 
 # Password validation
